@@ -34,7 +34,7 @@ public class UrlShortenerTest {
         String shortUrl = UrlShortener.generateShortenerUrl(longUrl);
         String basePath = Config.basePath;
         String differential = shortUrl.replaceAll(basePath, "");
-        assertEquals(6, differential.length());
+        assertEquals(Config.randomKeywordLength, differential.length());
     }
 
     @Test
